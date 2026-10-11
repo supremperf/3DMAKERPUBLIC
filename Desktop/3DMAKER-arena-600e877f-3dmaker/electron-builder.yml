@@ -1,0 +1,31 @@
+appId: com.3dmaker.studio
+productName: 3DMAKER
+asar: true
+artifactName: forge3d-setup.exe
+directories:
+  output: out
+  buildResources: public
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - package.json
+  - "!node_modules/**/*"
+extraResources:
+  - from: docs/THIRD-PARTY-NOTICES.md
+    to: licences-tiers.txt
+win:
+  target:
+    - target: nsis
+      arch: x64
+  icon: public/icon.ico
+  signAndEditExecutable: true
+  signExecutable: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 3DMAKER
+  installerLanguages:
+    - fr_FR
+  language: "1036"

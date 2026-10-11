@@ -1,0 +1,15 @@
+node_modules/
+dist/
+dist-electron/
+out/
+coverage/
+*.log
+.env*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+3dmaker.settings.json
+
+.arena/
+release/*.zip
